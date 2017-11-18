@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+  position: absolute;
+  left: 0;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.main {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 33%  33%  33%;
+  grid-template-areas:
+          "sidebar header header"
+          "board board board";
+  background-color: #fff;
+  color: #444;
+}
+
+form {
+  grid-area: sidebar;
+  padding: 03rem 0;
+  border: 1px solid rgba(123, 123, 123, 0.22);
+  border-radius: 4px;
+  margin: 1rem;
+}
+
+.top-components {
+  grid-area: header;
+  padding: 03rem 0;
+  border: 1px solid rgba(123, 123, 123, 0.22);
+  border-radius: 4px;
+  margin: 1rem;
+}
+
+.board {
+  grid-area: board;
+  width: 100%;
+}
+
+.component-box {
+  background: #36b096;
+  width: 2.6rem;
+  height: 2.6rem;
+  line-height: 2.6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 10px;
+}
