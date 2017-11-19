@@ -26,18 +26,17 @@ class App extends Component {
     this.updateComponent = this.updateComponent.bind(this);
 
     socket.on('connect', () => {
-      socket.on('init-components', (components) => {
-        this.setState({
-          components: components
-        });
-      });
       socket.on('create-components', (component) => {
         this.setState(({components}) => ({
           components: [component, ...components]
         }));
       });
+      socket.on('init-components', (components) => {
+        this.setState({
+          components: components
+        });
+      });
       socket.on('set-top-components', (components) => {
-        console.log('pppppp')
         this.setState({
           topUnitComponents: components
         });
